@@ -1,0 +1,19 @@
+{
+  "name": "dsh-pin",
+  "version": "0.1.0",
+  "description": "钉：把极少数值得长期记住的事显式钉住，其余交给记忆去淡忘。设置页可增删改，钉住的内容每轮注入。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "cordis.patch.yml"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "inject": ["slots"], "external": ["react"] }
+  }
+}
